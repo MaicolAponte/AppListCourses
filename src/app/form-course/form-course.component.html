@@ -1,0 +1,26 @@
+<ng-container>
+    <form (submit)="sendCourse()">
+        <div class="mb-3">  
+          <label for="nameCourse" class="form-label">Course: </label>
+          <input type="text" class="form-control" id="nameCourse" [(ngModel)]="newCourse.nameCourse" name="nameCourse" required>
+        </div>
+        <div class="form-floating mb-3">
+          <select class="form-select" id="floatingSelect" [(ngModel)]="newCourse.duration" name="duration" required>
+            <option value="1 Month" class="bg-dark text-white">1 Month</option>
+            <option value="3 Months" class="bg-dark text-white">3 Months</option>
+            <option value="6 Months" class="bg-dark text-white">6 Months</option>
+            <option value="1 Year" class="bg-dark text-white">1 Year</option>
+          </select>
+          <label for="floatingSelect">Duration: </label>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="floatingSelect" [(ngModel)]="newCourse.intensity" name="intensity" required>
+              <option value="Low" class="bg-info">Low</option>
+              <option value="Medium" class="bg-warning">Medium</option>
+              <option value="Hard" class="bg-danger">Hard</option>
+            </select>
+            <label for="floatingSelect">Intensity: </label>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</ng-container>

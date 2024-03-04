@@ -1,0 +1,12 @@
+<div class="">
+  <app-navbar
+  (viewFormCourse)="receiveViewCourse($event)"
+  (viewFormStudent)="receiveViewStudent($event)"
+></app-navbar>
+<!--[Course]="courseOfApp"-->
+<div class="container">
+  <router-outlet></router-outlet>
+  <button class="btn btn-primary" *ngIf="viewFormCourse">Hello World!!</button>
+</div>
+</div>
+

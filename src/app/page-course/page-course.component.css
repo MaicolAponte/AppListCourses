@@ -1,0 +1,8 @@
+.contain {
+    background-color: #2C2E3D ;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2%;
+    height: 100vh;
+}

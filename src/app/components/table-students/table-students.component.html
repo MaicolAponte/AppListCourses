@@ -1,0 +1,46 @@
+<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name Student</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Courses</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (student of listStudents; track $index) {
+        <tr>
+          <th scope="row">
+            <button
+              class="btn btn-outline-info"
+              [routerLink]="['/ViewStudent', student.id]"
+            >
+              {{ student.id }}
+            </button>
+          </th>
+          <td>{{ student.nameStudent }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.course}}</td>
+          <td>
+            <button
+              class="btn btn-danger"
+              (click)="expulsedStudent(student.id)"
+            >
+              Expulsed Student
+            </button>
+          </td>
+        </tr>
+      } @empty {
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      }
+    </tbody>
+  </table>

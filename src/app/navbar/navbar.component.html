@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-3" data-bs-theme="dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" routerLink=""><b>U del Programador</b></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['ViewCourse']"
+            >View Course</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['ViewStudents']"
+            >View Student</a
+          >
+        </li>
+      </ul>
+      <div class="d-flex">
+        <a class="navbar-brand" routerLink="">
+          <img
+            src="https://cdn.create.vista.com/api/media/medium/470833374/stock-vector-add-user-symbol-interface-gold-plated-metalic-icon-logo-vector?token="
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <!-- 
+  <button class="btn btn-primary m-1" type="submit" (click)="handleAddCourse()">Add Couse</button>
+                <button class="btn btn-primary m-1" type="submit" (click)="handleAddStudent()">Add Student</button>
+
+          -->
+      </div>
+    </div>
+  </div>
+</nav>

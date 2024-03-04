@@ -1,0 +1,31 @@
+<ng-container>
+  <form (submit)="sendStudent()">
+    <div class="row">
+      <div class="col">
+      <div class="mb-3">  
+        <label for="nameStudent" class="form-label">Name Student: </label>
+        <input type="text" class="form-control" id="nameStudent" [(ngModel)]="formStudent.nameStudent" name="nameStudent" required>
+      </div>
+      <div class="mb-3">  
+        <label for="email" class="form-label">Email: </label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="formStudent.email" name="email" required>
+      </div>
+    </div>
+    <div class="col">
+      <div class="mb-5">  
+        <label for="phone" class="form-label">Phone: </label>
+        <input type="text" class="form-control" id="Phone" [(ngModel)]="formStudent.phone" name="phone" required>
+      </div>
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelect" [(ngModel)]="formStudent.course" name="courses">
+          @for (course of courses; track $index) {
+            <option [value]="course.nameCourse" class="bg-dark text-white">{{ course.nameCourse }}</option>
+          }
+        </select>
+        <label for="floatingSelect">Select Course: (optional) </label>
+      </div>
+    </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </form>
+</ng-container>

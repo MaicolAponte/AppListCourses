@@ -1,0 +1,18 @@
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+.foot {
+    padding: 12px;
+    align-items: center;
+}
+
+p {
+    font-size: 13px;
+}
+.boxtext {
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}

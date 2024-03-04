@@ -1,0 +1,20 @@
+<div class="contain col align-item-center rounded">
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-primary m-2" (click)="viewTable()">
+      {{ buttomTable }}
+    </button>
+    <button class="btn btn-primary m-2" (click)="viewForm()" *ngIf="!formView">
+      New Course
+    </button>
+    <button class="btn btn-danger m-2" (click)="viewForm()" *ngIf="formView">
+      Cancel
+    </button>
+  </div>
+  <h1>List of course</h1>
+  <div class="pt-2 w-50" *ngIf="formView">
+    <app-form-course></app-form-course>
+  </div>
+  <div class="pt-2" *ngIf="tableView">
+    <app-table-course></app-table-course>
+  </div>
+</div>
